@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["*"],
+  content: ["*", "node_modules/preline/dist/*.js"],
+  darkMode: "class",
   theme: {
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+      serif: ["Inter", "serif"],
+    },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("preline/plugin")],
 };
